@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Love Quest</title>
+</head>
+<body>
+    <h1>Welcome to The Love Quest!</h1>
+    <p>Can you solve the clues to discover my love for you?</p>
+    
+    <div id="clue1">
+        <h2>Clue 1:</h2>
+        <p>I am not alive, but I can grow; I don’t have lungs, but I need air. What am I?</p>
+        <input type="text" id="answer1">
+        <button onclick="checkAnswer1()">Submit</button>
+    </div>
+
+    <div id="clue2" style="display:none;">
+        <h2>Clue 2:</h2>
+        <p>What is 2 + 2 multiplied by 3?</p>
+        <input type="text" id="answer2">
+        <button onclick="checkAnswer2()">Submit</button>
+    </div>
+
+    <div id="finalMessage" style="display:none;">
+        <h2>Congratulations!</h2>
+        <p>You’ve completed the quest! Just like this game, my love for you is full of surprises and challenges, but it’s always worth it. I love you more than words can say!</p>
+    </div>
+
+    <script>
+        function checkAnswer1() {
+            const answer = document.getElementById('answer1').value.toLowerCase();
+            if (answer === 'fire') {
+                document.getElementById('clue1').style.display = 'none';
+                document.getElementById('clue2').style.display = 'block';
+            } else {
+                alert('Try again!');
+            }
+        }
+
+        function checkAnswer2() {
+            const answer = document.getElementById('answer2'].value);
+            if (answer === '12') {
+                document.getElementById('clue2').style.display = 'none';
+                document.getElementById('finalMessage').style.display = 'block';
+            } else {
+                alert('Try again!');
+            }
+        }
+    </script>
+</body>
+</html>
